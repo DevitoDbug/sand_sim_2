@@ -1,8 +1,8 @@
 use macroquad::prelude::*;
 
 use crate::engine::{
-    game::Game,
     consts::{BLOCK_SIZE, COLS, ROWS},
+    game::Game,
 };
 
 mod engine;
@@ -23,4 +23,3 @@ fn config() -> Conf {
         ..Default::default()
     }
 }
-
