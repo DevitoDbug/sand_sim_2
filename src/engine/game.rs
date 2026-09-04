@@ -67,7 +67,6 @@ impl Game {
                 self.particles[i].y += BLOCK_SIZE;
             }else {
                let dx = if gen_range(0,2) == 0 { 1 } else {-1};
-               println!("dx: {}", dx);
                if self.can_move_down_sideways(&particle, dx) {
                    self.particles[i].x += BLOCK_SIZE * dx as f32;
                    self.particles[i].y += BLOCK_SIZE;
@@ -120,8 +119,8 @@ impl Game {
                 x as i32 / BLOCK_SIZE as i32 * BLOCK_SIZE as i32,
                 y as i32/ BLOCK_SIZE as i32 * BLOCK_SIZE as i32
             );
-        for i in 0..1{
-            for k in 0..1{
+        for i in -1..1 {
+            for k in -1..1 {
                 self.particles.push( SandParticle {
                         x: x as f32 + (i as f32 * BLOCK_SIZE) ,
                         y: y as f32 + (k as f32 * BLOCK_SIZE),
